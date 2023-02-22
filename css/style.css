@@ -141,10 +141,13 @@ a:visited {
         flex-basis: 325px;
     }
 
+    /* Making top part invisible to match spacing seen in picture */
     #gallery{
         visibility: hidden;
     }
 
+
+    /* Making bottom part display none so it does not affect spacing of other elements */
     .gallery {
         display: none;
     }
