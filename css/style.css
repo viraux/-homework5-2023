@@ -3,7 +3,7 @@
     display: block;
 }
 
-
+/* Creating animation with specified requirements */
 @keyframes logo{
     from {width: 25px; opacity: 0;}
     to {width: 475px; opacity: 1;}
@@ -15,6 +15,7 @@ body {
     background-image: url("../images/concrete_seamless.png");
     background-color: #f1f1f1;
 }
+
 
 header {
     display: flex;
@@ -32,6 +33,7 @@ header {
     
 }
 
+/* Making sure the color of links stays blue after being visited */
 a:visited {
     color: blue;
 }
@@ -45,6 +47,7 @@ a:visited {
     border-top-left-radius: 50px;
 }
 
+/* Adding in border radius for both .card > header and .card to ensure it matched example */
 .card{
     border-top-right-radius: 50px;
     border-top-left-radius: 50px;  
@@ -80,6 +83,7 @@ a:visited {
 
 @media screen and (min-width: 900px) {
 
+    /* Reseting flex-direction to line up the element by row instead of column with new screen size */
     header, .nav_links{
         flex-direction: initial;
         justify-content: space-between;
@@ -94,6 +98,7 @@ a:visited {
 
     }
 
+    /* Setting each .card box to 275px so they are the same width */
     .card > header{
         flex-basis: 275px;
     }
@@ -104,6 +109,7 @@ a:visited {
     }
 }
 
+/* Sets animation of logo to none for reduced motion */
 @media (prefers-reduced-motion) {
     #logo {
         animation: none;
@@ -117,9 +123,12 @@ a:visited {
         background-image: none;
     }
    
+    /* Setting nav width to be 100% so it spans entire screen */
     nav {
         flex-basis: 100%;
     }
+
+    /* Resetting flex-direction so both the header and .nav-links line up properly */
 
     header {
         flex-direction: initial;
@@ -131,6 +140,7 @@ a:visited {
         justify-content: space-evenly;
     }
 
+    /* Making sure each element is on the same line and lined up at the bottom */
     .pricing {
         flex-wrap: nowrap;
         align-items: flex-end;
@@ -152,6 +162,7 @@ a:visited {
         display: none;
     }
 
+    /* Adding in thumbs up emoji after the second list element within the .card class */
     .card li:nth-child(2)::after {
         content: "\1F44D";
     }
